@@ -19,4 +19,4 @@ function displayTime(){
 
 set interval(displayTime, 1000);
 
-//inspirado por "Code Traversal"
+// Me inspirei no "Code Traversal"
