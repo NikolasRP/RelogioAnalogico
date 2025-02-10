@@ -1,22 +1,25 @@
-let hr = document.getElementById('hr');
-let min = document.getElemntById('min');
-let s = document.getElementByUd('s');
+let hr = document.getElementById('hour');
+let min = document.getElementById('min');
+let sec = document.getElementById('sec');
 
 function displayTime(){
-  // getting hour, minutes, seconds from date
-  let HH = date.getHours();
-  let MM = date.getMinutes();
-  let SS = date.getSeconds();
+    let date = new Date();
 
-  let hRotation = 30 * HH + MM/2;
-  let mRotation = 6 * MM;
-  let sRotation = 6 * SS;
+    // Getting hour, mins, secs from date
+    let hh = date.getHours();
+    let mm = date.getMinutes();
+    let ss = date.getSeconds();
 
-  hr.style.transform = `rotate(${hRotation}deg)`;
-  min.style.transform = `rotate(${mRotation}deg)`;
-  s.style.transform = `rotatr(${sRotation}deg)`;
+    let hRotation = 30*hh + mm/2;
+    let mRotation = 6*mm;
+    let sRotation = 6*ss;
+
+    hr.style.transform = `rotate(${hRotation}deg)`;
+    min.style.transform = `rotate(${mRotation}deg)`;
+    sec.style.transform = `rotate(${sRotation}deg)`;
+
 }
 
-set interval(displayTime, 1000);
+setInterval(displayTime, 1000);
 
-// Me inspirei no "Code Traversal"
+//inspirado por "Code Traversal"
